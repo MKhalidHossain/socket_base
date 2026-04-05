@@ -1,18 +1,51 @@
-# socket_base
+# Socket Base
 
-A new Flutter project.
+Reusable Flutter Socket.IO asset built so the whole `lib/socket_service/` folder can be copied into another project.
 
-## Getting Started
+## What is inside
 
-This project is a starting point for a Flutter application.
+- Reusable `SocketClient`
+- Central `SocketConfig`
+- Event and exception models
+- Example usage file
+- Minimal demo app
 
-A few resources to get you started if this is your first Flutter project:
+## Project structure
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+```text
+lib/
+├── main.dart
+└── socket_service/
+    ├── README.md
+    ├── examples.dart
+    ├── index.dart
+    ├── socket_client.dart
+    ├── socket_config.dart
+    ├── socket_events.dart
+    ├── socket_exceptions.dart
+    ├── socket_service.dart
+    └── src/
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# socket_base
+## Main module docs
+
+See [lib/socket_service/README.md](lib/socket_service/README.md) for:
+
+- installation
+- quick start
+- available API
+- integration patterns
+- notes about `disconnect()` vs `dispose()`
+
+## Preferred import
+
+```dart
+import 'package:your_app/socket_service/socket_service.dart';
+```
+
+## Local verification
+
+```bash
+flutter analyze
+flutter test
+```
